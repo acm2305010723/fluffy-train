@@ -33,43 +33,7 @@ int main ()
 }
 
 
-//#include <stdio.h>
-//int main()
-//{
-//	int num1,num2,result;
-//	char operator;
-//	scanf("%d",&num1); 
-//	while(1)
-// {
-//	
-//	scanf("%c",&operator);
-//	switch(operator=='='){
-//	   break;
-//	}
-//	scanf("%d",&num2);
-//	switch(operator){
-//		case'+':num1+num2;
-//		break;
-//		case'-':num1-num2;
-//		break;
-//		case'*':num1*num2;
-//		break;
-//		case'/':
-//			if(num2 != 0)
-//			result=num1/num2;
-//			else{
-//				printf("SRROR\n");
-//				continue;
-//			}
-//		break;
-//	}
-////	default:
-////		printf("SRROR\n");
-////		continue;
-// }
-//    printf("%d\n",result);
-//	return 0;
-//}
+
 
 /*#include <stdio.h>
 int main()
