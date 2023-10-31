@@ -1,0 +1,10 @@
+//十六进制转十进制
+#include <stdio.h>
+int main()
+{
+	int hexnumber;
+	scanf("%x",&hexnumber);
+   printf("%d\n",hexnumber);
+	return 0;
+}  
+
