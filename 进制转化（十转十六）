@@ -1,0 +1,9 @@
+ //十进制转十六进制
+ #include <stdio.h>
+int main()
+{
+	int decimal;
+	scanf("%d",&decimal);
+    printf("%x\n",decimal);
+	return 0;
+ }   
