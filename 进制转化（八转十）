@@ -1,0 +1,16 @@
+//八进制转十进制
+#include <stdio.h>
+int main()
+{
+	int octalnumber;
+	scanf("%o",&octalnumber);
+   printf("%d\n",octalnumber);
+	return 0;
+} 
+ 
+
+
+
+
+ 
+ 
