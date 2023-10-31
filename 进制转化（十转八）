@@ -1,0 +1,30 @@
+//十进制转八进制
+#include <stdio.h>
+int main()
+{
+	int decnum;
+	scanf("%d",&decnum);
+	int arr[100]={0};
+	int i;
+	for(i=0 ; i<100 ; i++ )
+	{
+		int a=decnum%8;
+		decnum=decnum/8;
+		arr[i]=a;
+		if(decnum==0)
+		{
+			break;
+		}
+	}
+	int octum=0;
+	int j;
+   for(j=i;j >=0 ; j-- )
+   {
+   	printf("%d",arr[j]);
+	}
+	return 0; 
+}
+
+
+ 
+ 
