@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main ()
+{
+	int m,n,i;
+	double a,s;
+	scanf("%d %d",&m,&n);
+	a=m;
+	s=m;
+	for(i=1;i<=n;i++)
+	{
+		a/=2.0;
+		s+=2*a;
+	}
+	printf("%.2lf %.2lf",a,s);
+	return 0;
+}
