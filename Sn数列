@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main ()
+{
+	int n;
+	int Sn=0;
+	int i,b;
+	scanf("%d",&n);
+	b=2;
+	for(i=1;i<=n;i++)
+	{
+		Sn+=b;
+		b=b*10+2;
+	}
+	printf("%d\n",Sn);
+	return 0;
+}
