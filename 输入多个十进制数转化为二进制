@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main ()
+{
+	int x,y,n;
+	long long s=0;
+	x=1;
+
+	while(scanf("%d",&n)!=EOF)
+	{
+		s=0;
+	    x=1;
+	    while(n!=0)
+	    {
+		y=n%2;
+		s+=y*x;
+		x*=10;
+		n/=2;
+//		printf("%d\n",y);
+		}
+		printf("%lld\n",s);
+	}
+	return 0; 
+}
