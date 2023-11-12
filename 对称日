@@ -1,0 +1,110 @@
+#include<stdio.h>
+int pingnian(int year)//定义函数，用来判断是否是平年 
+{
+	if(year%4==0&&year%100!=0||year%400==0){
+		return 0; 
+	}else{
+		return 1;
+	}
+}
+int huiwen(int x)//定义函数，用来判断是否是回文数字 
+{
+	int a[8],i=0;
+	while(x!=0){//把八位数的日子存入数组 
+		a[i]=x%10;
+		x/=10;
+		i++;
+	}
+	int flag=0,j;
+	for(i=0,j=7;i<8,j>=0;i++,j--){//数组从前往后，从后往前逐次对比，判断是否是回文数字 
+		if(a[i]==a[j]){
+			flag=1;
+		}else{
+			flag=0;
+			break;
+		}
+	}
+	return flag;
+}
+int main()
+{
+	int m,n,cnt=0;
+	//scanf("%d %d",&m,&n);//输入两个年份 
+	while(scanf("%d %d",&m,&n)!=EOF)
+	{
+		int year,month,day;
+	for(year=m;year<=n;year++){//年份从m到n 
+		for(month=1;month<=12;month++){//月份从1到12 
+			if(pingnian(year)){//平年与闰年差的只是2月的日数
+				if(month==2){
+					for(day=1;day<=28;day++){//平年2月为28天 
+						if(huiwen(year*10000+month*100+day)){
+							printf("%10d ",year*10000+month*100+day);
+							cnt++;
+							if(cnt%5==0&&cnt!=0){
+								printf("\n");
+							}
+						}
+					}
+				}else if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
+					for(day=1;day<=31;day++){
+						if(huiwen(year*10000+month*100+day)){
+							printf("%10d ",year*10000+month*100+day);
+							cnt++;
+							if(cnt%5==0&&cnt!=0){
+								printf("\n");
+							}
+						}
+					}
+				}else{
+					for(day=1;day<=30;day++){
+						if(huiwen(year*10000+month*100+day)){
+							printf("%10d ",year*10000+month*100+day);
+							cnt++;
+							if(cnt%5==0&&cnt!=0){
+								printf("\n");
+							}
+						}
+					}
+				}
+			}else{
+				if(month==2){
+					for(day=1;day<=29;day++){//闰年2月为29天 
+						if(huiwen(year*10000+month*100+day)){//如果是回文数字则输出 
+							printf("%10d ",year*10000+month*100+day);
+							cnt++;
+							if(cnt%5==0&&cnt!=0){//如果输出满五个就换行 
+								printf("\n");
+							}
+						}
+						
+					}
+				}else if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
+					for(day=1;day<=31;day++){
+						if(huiwen(year*10000+month*100+day)){
+							printf("%10d ",year*10000+month*100+day);
+							cnt++;
+							if(cnt%5==0&&cnt!=0){
+								printf("\n");
+							}
+						}
+					}
+				}else{
+					for(day=1;day<=30;day++){
+						if(huiwen(year*10000+month*100+day)){
+							printf("%10d ",year*10000+month*100+day);
+							cnt++;
+							if(cnt%5==0&&cnt!=0){
+								printf("\n");
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	printf("%d\n",cnt);//最后输出对称日的个数 
+	}
+	
+	return 0;
+}
