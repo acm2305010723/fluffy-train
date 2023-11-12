@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+	int i = 0, base, j, num[100] ;
+    while(scanf("%d", &base)!=EOF)
+    {
+//	   do {
+//		num[i] = base % 2;
+//		base = base / 2;
+//		i++;
+//		j++;
+//	   } while (base != 0);
+    while(base!=0)
+    {
+    	num[i]=base%2;
+    	base=base/2;
+    	i++;
+    	j++;
+	}
+	for (j = i-1; j>= 0;j--)
+		printf("%d", num[j]) ;
+	}
+	return 0;
+}
