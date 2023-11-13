@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main(void)
+{
+	int n,T;
+	int i,j,k;
+	char ch;
+	scanf("%d",&T); 
+	getchar();
+	for(k=1;k<=T;k++)
+	{
+		scanf("%c %d",&ch,&n);
+		getchar();
+		for(i=1;i<=n;i++)
+		{
+			for(j=0;j<n-i;j++)
+			{
+				putchar(' ');
+			}
+			for(j=0;j<2*i-1;j++)
+			{
+				putchar(ch);
+			}
+			printf("\n");
+		}
+		for(i=1;i<=n-1;i++)
+		{
+			for(j=0;j<i;j++)
+			{
+				putchar(' ');
+			}
+		    for(j=0;j<=2*(n-1-i);j++)
+		    {
+		    	putchar(ch);
+			}
+			printf("\n");
+		}
+	}
+	return 0;
+} 
